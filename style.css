@@ -1,0 +1,630 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;;
+}
+.navbar{
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 0px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top of the screen */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Make the navbar span the full width of the screen */
+    background-color: #fff; /* Add a background color for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from content */
+    z-index: 1000; /* Ensure it is above other content */
+    font-size: 14px; /* Set the font size */
+}
+nav{
+    flex:1;
+    text-align: center;
+}
+nav ul{
+    /* display: inline-block;
+    list-style-type: none; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    /* display: inline-block;
+    margin-right: 20px;
+    position: relative; For dropdown positioning */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px; /* Default font size */
+    padding: 10px 15px;
+}
+p{
+    color: #555;
+}
+.container{
+    margin-top: 10px; /* Add top margin to container to avoid overlap with fixed navbar */
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 1;
+    position: relative;
+   
+   
+
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 70px;
+}
+@keyframes movedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------WorkExp----------------------- */
+.workExp{
+    position:relative;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.workExp-container{
+    padding:10px 10px;
+    position: relative;
+    width:100%;
+    animation: movedown 1s linear forwards;
+    opacity:0;
+}
+.workExp-container:hover .text-box {
+    background: linear-gradient(to right, #e0e0e0, #ffffff); /* Gradient background */
+}
+.workExp-container:nth-child(1){
+    animation-delay: 0.5s;
+}
+.workExp-container:nth-child(2){
+    animation-delay: 1s;
+}
+.workExp-container:nth-child(3) {
+    animation-delay: 1.5s;
+    
+}
+.workExp-container:nth-child(4) {
+    animation-delay: 2s;
+}
+.workExp-container:nth-child(5) {
+    animation-delay: 2.5s;
+}        
+/* ----------------------Edu Time Line----------------------- */
+.edu-timeline {
+    width: 100%;
+    height: 696px;
+    background: #ECF1F524;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    margin: 30px auto; /* Use margin to position it below other sections */
+    box-shadow: 0px 20px 53px -30px rgba(95, 102, 173, 0.566816);
+    border-radius: 10px;
+    position: relative; /* Change to relative */
+}
+
+.edu-timeline .box {
+    width: 100%;
+    margin-top: 99.5px;
+    padding:10px 10px 10px 10px;
+}
+
+.edu-timeline .box-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.edu-timeline .lines {
+    margin-left: 40px;
+    margin-top: 6px;
+}
+
+.edu-timeline .dot {
+    width: 14px;
+    height: 14px;
+    background: #D1D6E6;
+    border-radius: 7px;
+}
+
+.edu-timeline .line {
+    height: 100px;
+    width: 2px;
+    background: #D1D6E6;
+    margin-left: 5.3px;
+}
+
+.edu-timeline .cards {
+    width: 100%;
+    margin-left: 12px;
+    transform: translateY(-12px);
+}
+
+.edu-timeline .card {
+    width: 100%;
+    height: 93px;
+    padding-top: 15px;
+    background: #e8edf0;
+    box-shadow: 0 2px 2px 0 #eeeeee40;
+    border-radius: 10px;
+    box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.0944602);
+    margin-bottom: 10px;
+}
+
+.edu-timeline .card.mid {
+    height: 71px;
+}
+
+.edu-timeline .card h4{
+    line-height: 19px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color:#080808;
+}
+
+.edu-timeline .card p {
+  
+    font-size: 16px;
+    line-height: 22px;
+    color: #080808;
+    margin-left: 25px;
+}
+
+.edu-timeline .bottom {
+    width: 100%;
+    height: 107px;
+    background: #fff;
+    box-shadow: 0 0 2px #eeeeee50;
+    padding-top: 45px;
+}
+
+.edu-timeline .btn {
+    width: 249px;
+    height: 62px;
+    background: #FFFFFF40;
+    mix-blend-mode: normal;
+    cursor: pointer;
+    border: 1px solid #8260D780;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2B2862;
+    margin-left: 53px;
+    transition: 0.3s;
+    background: #2B2862;
+    color: #fff;
+    border-color: #2B2862;
+}
+
+.edu-timeline .btn:hover {
+    transform: scale(1.03);
+}
+
+
+/* ----------------------others----------------------- */
+.text-box{
+   padding:20px 30px;
+   background:#dbe5f5;
+   position:relative;
+   border-radius: 6px;
+   font-size:14px;
+   width:100%
+} 
+
+/* Responsive styles for screens smaller than 800px */
+@media only screen and (max-width: 800px) {
+    .edu-timeline {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .edu-timeline .box {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .edu-timeline .box-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .edu-timeline .lines {
+        display: none; /* Hide the lines and dots */
+    }
+
+    .edu-timeline .dot {
+        display: none; /* Hide the dots */
+    }
+
+    .edu-timeline .line {
+        display: none; /* Hide the lines */
+    }
+
+    .edu-timeline .cards {
+        margin-left: 0;
+        transform: none;
+    }
+
+    .edu-timeline .card {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .edu-timeline .card h4, .edu-timeline .card p {
+        margin-left: 10px;
+    }
+
+    .edu-timeline .bottom {
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .edu-timeline .btn {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+}
+
+/* --------------Table-------------------- */
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+th {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+td {
+    padding: 10px 10px;
+}
+.category {
+    font-weight: bold;
+    padding-top: 20px;
+    
+}
+/* --------------Email form-------------------- */
+.email-form{
+    /* width : 100%;
+    height: 100vh;
+    background:#001660; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 1vw;
+    width:90%;
+    max-width:1200px;
+    padding-bottom: 30px;
+
+}
+form h3{
+    color:#555;
+    font: weight 800px; 
+    margin-bottom: 20px;
+}
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding:20px;
+    outline:none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+form button{
+    padding:5px;
+    background: #D1D6E6;
+    color: rgb(44, 43, 43);
+    font-size: 16px;
+    border:0;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    margin: 10px auto 0;
+    border-radius: 30px;
+}
+
+/* --------------others -------------------- */
+.row{
+    padding-top:0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.label{
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+.col-2{
+    flex-basis: 50%;
+    max-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 0px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin:25px 0;
+}
+.btn{
+    display: inline-block;
+    background: rgb(241, 243, 243);
+    color: #080808;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    transition: background 0.5s;
+
+}
+.row h3{
+    color: #080808;
+    text-align: center;
+}
+.btn:hover{
+    background: #0565be;
+}
+.header{
+    /* background: radial-gradient(#fff,#cae2f5); */
+    padding-bottom: 50px;
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis:30% ;
+    max-width: 250px;
+    margin-bottom: 30px;
+    
+}
+.col-3 img{
+    width:70%;
+    height: 100px;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right:25px;
+
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform(0.5s);
+
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    padding-top: 50px;
+    text-align: center;
+    margin:70px auto 80px;
+    position: relative;
+    line-height: 60px;
+}
+.title::after{
+    content:'';
+    background:#555;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%)
+}
+.hover-grow {
+    transition: font-size 0.5s;
+}
+
+.hover-grow:hover {
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+.col-5{
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform(0.5s);
+
+}
+.col-5 img{
+    width: 100%;
+}
+.dyson-haircare{
+    background: radial-gradient(#ce3939,#207dc9);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.price-converter {
+    margin: 20px;
+}
+.price-converter input {
+    margin-bottom: 10px;
+    display: block;
+}
+.item {
+    margin: 10px 0;
+}
+
+/* --------------footer--------- */
+.footer {
+    background: radial-gradient(#f0e9e9,#f6f6f7);
+    color: rgb(221, 219, 219); /* Set the font color to white */
+    font-size: 14px;
+    padding:10px 0 10px;
+}
+.footer-row{
+    padding-top:0;
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+#brandList {
+    /* display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s ease-out;
+    background-color: lightblue; */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    }
+#brandList li {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* ------------Media Query for Menu ----------- */
+
+@media only screen and (max-width : 800px){
+    nav ul {
+        flex-direction: row; /* Ensure items stay in a row */
+        justify-content: space-around; /* Space items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding for spacing */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Adjust margins for spacing */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Smaller font size */
+        padding: 5px 10px; /* Adjust padding */
+    }
+}
+/* ------------Media Query for less then 600px screen size ----------- */
+@media only screen and (max-width : 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4,.col-5{
+        flex-basis: 100%;
+    }
+
+
+    /* Media query for smaller screens */
+    .table-container {
+        padding: 10px;
+    }
+
+    .table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        font-size: 12px;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        font-size: 12px;
+    
+}
+
+}
+
+/* ---------------Media query for screens larger than 800px ---------------*/
+@media (min-width: 801px) {
+    #brandList {
+        /* display: flex; */
+        max-height: none; /* Reset max-height for larger screens */
+        justify-content: center;
+        gap: 20px; /* Adjust the spacing between items as needed */
+    }
+    #brandList li {
+        display: inline-block;
+        margin-right: 0; /* Reset the margin for flex items */
+    }
+    .menu-icon {
+        display: none; /* Hide the menu icon */
+    }
+}
