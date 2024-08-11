@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CV Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+      header {
+        text-align: center;
+      }
+      section {
+        margin-top: 20px;
+      }
+      h2 {
+        color: #333;
+      }
+      .profile-summary,
+      .education,
+      .work-experience,
+      .skills {
+        margin-bottom: 20px;
+      }
+      .contact-info {
+        margin-top: 30px;
+      }
+      .profile-summary {
+        display: flex; 
+        align-items: flex-start; 
+        gap: 20px;
+      }
+
+      .profile-summary .profile-image {
+        flex: 3; 
+        
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+      }
+      .profile-summary .profile-text {
+        flex: 9; 
+      }
+      .aboutme {
+        text-align: justify;
+        line-height: 2;
+      }
+      .education {
+        display: flex; 
+        align-items: flex-start; 
+        gap: 20px; 
+      }
+
+      .education-list {
+        flex: 7; 
+      }
+
+      .education-photo {
+        flex: 5;
+       
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+      }
+
+      .education-photo img {
+        width: 100%; 
+        max-width: 500px; 
+        height: auto;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .education {
+          flex-direction: column;
+        }
+
+        .education-photo img {
+          max-width: 100%; 
+        }
+      }
+      .work-experience {
+        text-align: justify;
+        line-height: 2;
+      }
+      .jobtitle {
+        font-size: 18px;
+      }
+      .skills {
+        display: flex; 
+        justify-content: center ; 
+        align-items: flex-start; 
+      }
+
+      .skills-list {
+        width: 48%;
+      }
+      .skills-list .content-wrapper {
+        display: flex;
+        align-items: center; /* Aligns items vertically in the center */
+        justify-content: space-between; /* Spaces out the list and the image */
+        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+   
+    }
+    
+    .skills-items {
+        flex: 1; /* Allows the list container to grow and fill available space */
+       
+    }
+    
+    .skills-image {
+        flex:3em;
+   
+    }
+   ul {
+        list-style-type: none;
+        padding: 0; 
+      }
+
+      li {
+        margin-bottom: 10px; 
+      }
+        
+      @media (max-width: 768px) {
+        .skills {
+          flex-direction: column; 
+        }
+
+        .skills-list {
+          width: 100%; 
+        }
+      }
+      .project-links {
+        position: relative;
+        overflow: hidden; 
+      }
+      
+      .car-icon {
+        position: absolute;
+        left: -100px; 
+        bottom: 10px; 
+        width: 150px; 
+        opacity: 0; 
+        transition: opacity 0.5s; 
+      }
+      
+      @keyframes slideInAndOut {
+        0%, 100% { transform: translateX(0); opacity: 0; }
+        10%, 90% { transform: translateX(900px); opacity: 1; } /* Adjust translation based on desired movement */
+      }
+      
+      .project-links:hover .car-icon {
+        animation: slideInAndOut 30s ease-in-out forwards;
+      }
+      
+      .fun-facts {
+        text-align: justify; 
+        line-height: 1.5; 
+      }
+    
+      .fun-facts h2 {
+        font-family: Arial, sans-serif; 
+        color: blue; 
+        font-style:italic; 
+      }
+    
+      .fun-facts ul {
+        padding-left: 20px; 
+      }
+    
+      .fun-facts li {
+        margin-bottom: 10px; 
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <div class="name">
+            <h1>Hninn Ei Khaing @ Emily</h1>
+            <p>
+              Email:
+              <a href="mailto:e1114079@u.nus.edu">e1114079@u.nus.edu</a>
+              | <a href="tel:+6597242807">Call: +65 97242807</a>
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section class="profile-summary">
+        <div class="profile-image">
+          <img
+            src="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/NewYearPhoto.jpeg"
+            alt="Profile Picture"
+            style="width: 250px; height: 250px; border-radius: 50%;"
+          />
+        </div>
+        <div class="profile-text">
+          <p class="aboutme">
+            With a Graduate Diploma in Software Development from NUS ISS and a degree in 
+            Business Administration from Birmingham City University, I bring a unique combination of 
+            technical expertise and business acumen. With over a decade of experience in administration 
+            and accounting, I excel in problem-solving and project management, driving operational 
+            efficiency improvements. Skilled in JavaScript, Outsystems, and React, I am deeply passionate about 
+            continuous learning and innovation. Currently, as a junior web developer at NTT Data Singapore, 
+            I specialize in creating prototype concepts for presales items and integrating the EVA Chatbot for 
+            potential customer solutions. I thrive on embracing new challenges and am actively seeking 
+            growth opportunities within the dynamic tech industry.
+          </p>
+        </div>
+      </section>
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">Education</h2>
+      <section class="education">
+        <div class="education-list" style = "font-size:larger; font:bolder; line-height:30px;">
+        <ul>
+            <li>
+              <strong >National Universtiy Singapore</strong>
+              <p>Graduate Diploma in Systems Analysis, 2023 - 2024</p>
+            </li>
+            <li>
+              <strong >Birmingham City University</strong>
+              <p>
+                B.A (Hons.) in Business Administration, 2018 - 2019
+              </p>
+            </li>
+            <li>
+              <strong >Kaplan Business Institute</strong>
+              <p>Diploma in Accounting & Management, 2014 - 2015</p>
+            </li>
+            <li>
+              <strong>Yadanabon University</strong>
+              <p>B.A in English, Linguistics Major, 2005 - 2007</p>
+            </li>
+            <li>
+              <strong >NCC Education</strong>
+              <p>Diploma in Computer Studies, 2004 - 2005</p>
+            </li>
+          </ul>
+        </div>
+        <div class="education-photo">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/girduation+1.png" alt="Educational Achievements"
+           style="width: 400px; height: 400px; border-radius: 10%;"/>
+        </div>
+      </section>
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">Work Experience</h2>
+      <section class="work-experience">
+        <ul>
+          <li>
+            <strong style = "font-size: x-large;">NTT DATA SINGAPORE</strong> (Sept 2023 to Current)
+            <span class="jobtitle">Web Developer</span>
+            <ul>
+              <li>
+                •	Utilized OutSystems to design and implement user-friendly interfaces, focusing on ease of use and aesthetic appeal.
+              </li>
+              <li>
+                •	Integrated essential APIs including Google Maps for location
+                services and others for real-time data rendering, ensuring
+                seamless functionality.
+              </li>
+              <li>
+                •	Overcame OutSystems library constraints by implementing
+                JavaScript solutions, enhancing the system's interactivity and
+                performance.
+              </li>
+              <li>
+                •	Managed SQL database integration, ensuring robust and efficient
+                data handling and storage.
+              </li>
+              <li>
+                •	Conducted comprehensive testing of EV charging management
+                systems developed by our European team, focusing on functional,
+                performance, and usability aspects.
+              </li>
+              <li>
+                •	Eva Chat Bot: Utilized the EVA platform to create and refine
+                chatbot dialogues, focusing on improving engagement with
+                potential customers.
+              </li>
+            </ul>
+          </li>
+  
+          <p></p>
+          <li>
+            <strong style = "font-size: x-large;">HB Book Centre</strong> (July 2013 - October 2022)
+            <span class="jobtitle">Office Secretary</span>
+            <ul>
+              <li>
+                •	Performed a wide range of administrative tasks, including
+                handling phone calls, providing customer service, and managing
+                online orders.
+              </li>
+              <li>
+                •	Coordinated with vendors to arrange orders and ensured timely
+                delivery, particularly for school orders and daily distribution.
+              </li>
+              <li>
+                •	Managed office supplies, restocking as needed, and assisted with
+                document requests and filings.
+              </li>
+              <li>
+                •	Handled basic accounting responsibilities, including invoicing,
+                income tax filing, and GST filling.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">Skills</h2>
+      <section class="skills">
+        <div class="skills-list">
+          <h3>Development Skills</h3>
+          <div class="content-wrapper">
+              <div class="skills-items" style="line-height:1.5em">
+                  <ul>
+                      <li>JavaScript</li>
+                      <li>Spring Boot</li>
+                      <li>React</li>
+                      <li>Outsystems</li>
+                      <li>MySQL</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Python</li>
+                      <li>Java</li>
+                      <li>c#</li>
+                      <li>.Net</li>
+                  </ul>
+              </div>
+              <div class="skills-image">
+                  <img src="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/Developerskill.gif" style="width: 250px; height: 350px; border-radius: 50%;">
+              </div>
+          </div>
+      </div>
+      
+        <div class="skills-list" style = "line-height: 2;">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>
+              <strong>Market Awareness:</strong> Proactively stay updated on
+              industry trends, market conditions, and competitors' products and
+              pricing to make informed decisions and provide valuable insights.
+            </li>
+            <li>
+              <strong>Customer Satisfaction:</strong> Skilled in identifying and
+              resolving customers' concerns, providing excellent customer
+              service, and building strong relationships.
+            </li>
+            <li>
+              <strong>Communication:</strong> Possess strong interpersonal
+              skills, enabling fast and effective communication with team
+              members, clients, and stakeholders.
+            </li>
+            <li>
+              <strong>Team Collaboration:</strong> Act as a team player,
+              fostering a positive and collaborative work environment while
+              contributing to the success of the team.
+            </li>
+            <li>
+              <strong>Time Management:</strong> Capable of managing daily
+              schedules and prioritizing tasks to ensure maximum productivity
+              and efficiency.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">Project Contribution during Academic Year</h2>
+      <section class="fun-facts">
+      <ul style = "line-height: 3rem;">
+        <li>
+          <Strong>Digital Solutions Development - Digital Design for supermarket</Strong>
+          <a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/DesignForSupermarket.pdf" target="_blank">View My Project Report</a>
+        </li>
+        <li>
+          <strong> Solution Development - Stationery Store Inventory System</strong>
+          <a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/DesignForStationeryStore.pdf" target="_blank">View My Project Report</a>
+        </li>
+        <li>
+          <strong> Development in .NET - Shopping Cart Application (Core Functionalities)</strong>
+          <a href="https://github.com/EEmily079/.NetShoppingCart" target="_blank">View My GitHub Repository</a>
+        </li>
+        <li>
+          <strong>Learning Application - Image Classifier for Fruits</strong> 
+          <a href="https://github.com/EEmily079/ImageClassifer" target="_blank">View My GitHub Repository</a>
+        </li>
+        <li>
+          <strong>Web Application Development using Java (Course Application Processing System)</strong>
+          <a href="https://github.com/EEmily079/CAPS-Project-SpringBoot" target="_blank">View My GitHub Repository</a>
+        </li>
+      </ul>
+      </section>
+
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">EV Charging Management System (Internship Project)</h2>
+      <section>
+        <div class="project-links">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/EV_car_icon.png" alt="Car" class="car-icon">
+          <a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/EVCMS+Project+Summary+Report.pdf" target="_blank"><h3>Project Summary Report</h3></a>
+          <a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/NUS-ISS+SA56+Internship+-+NDSG+EVCMS.pdf" target="_blank"><h3>Project Show Case</h3></a>
+          
+        </div>
+      </section>
+
+      <h2 style = "background-color: rgb(133, 153, 242); color:white">Fun Facts about me</h2>
+      <section class="fun-facts">
+      <ul>
+            <li>
+              <strong>Sponsored Success:</strong> Achieved both my diploma and degree in Singapore, 
+              thanks to a sponsorship from my previous employer, HB Book Center, where I dedicated over 9 years, 
+              fostering lifelong relationships with my colleagues and boss.
+            </li>
+            <li>
+              <strong>Career Transition Triumphs:</strong>Transitioned from a longstanding career in administration to software development,
+               embracing a world of new and exciting challenges.
+            </li>
+            <li>
+              <strong>From Intern to Innovator: </strong> Started as an intern and earned a permanent role at NTT DATA Singapore 
+              as a Pre-sales POC Developer, contributing fresh ideas and solutions.
+            </li>
+            <li>
+              <strong>Lifelong Learner:</strong> My journey from books to bytes reflects my passion for continuous learning 
+              and adaptation, proving it's never too late to dive into a new field.
+            </li>
+            <li>
+              <strong>Team Spirit:</strong> Known for boosting team morale with my optimistic outlook, I believe in the power of 
+              positivity to drive productivity and foster a supportive work environment.
+            </li>
+          </ul>
+      </section>
+       </div>
+      
+    <br/>
+    <br/>
+      <section class="contact-info">
+        <div style="
+             text-align:center;
+             font:bolder;
+            ">
+                    Feel free to contact me via email at
+          <a href="mailto:e1114079@u.nus.edu">e1114079@u.nus.edu</a> or
+          What up me <a href="https://wa.me/6597242807">WhatsApp: +65 97242807</a>
+        </div>
+        <div style = "text-align: center;">
+          <img src = "https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/thanks-grateful.gif"/>
+        </div>
+          
+         
+
+       
+   
+          
+      </section>
+      <section>
+          
+      </section>
+    </div>
+ 
+  </body>
+</html>
